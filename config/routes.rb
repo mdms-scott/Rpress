@@ -1,4 +1,9 @@
 Rpress::Application.routes.draw do
+  get "posts/index"
+  
+  get "post/:id" => "posts#show"
+  get "posts/create" => "posts#create"
+  post "posts/create" => "posts#create"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +53,7 @@ Rpress::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "posts#index"
 
   # See how all your routes lay out with "rake routes"
 

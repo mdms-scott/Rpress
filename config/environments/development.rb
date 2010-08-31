@@ -24,3 +24,4 @@ Rpress::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 end
 
+APP_URL = "http://localhost:3000/"
